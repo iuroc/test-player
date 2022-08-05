@@ -28,7 +28,7 @@
         const dp = new DPlayer({
             container: document.getElementById('dplayer'),
             video: {
-                url: location.hash.substring(1) || "https://jdvv009.microclassonline.com/20220802/OMS9dKz6/index.m3u8", type: "auto"
+                url: decodeURIComponent(location.hash.substring(1)) || "https://jdvv009.microclassonline.com/20220802/OMS9dKz6/index.m3u8", type: "auto"
             }
         })
     </script>
