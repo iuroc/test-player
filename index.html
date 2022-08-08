@@ -37,19 +37,10 @@
             container: document.getElementById('dplayer'),
             video: {
                 url: decodeURIComponent(location.hash.substring(1)) || "https://jdvv009.microclassonline.com/20220802/OMS9dKz6/index.m3u8", type: "auto"
-            },
-            contextmenu: [
-                {
-                    text: 'custom1',
-                    link: 'https://github.com/DIYgod/DPlayer',
-                },
-                {
-                    text: 'custom2',
-                    click: (player) => {
-                        console.log(player);
-                    },
-                },
-            ]
+            }
+        })
+        addEventListen('hashchange', function () {
+            location.reload()
         })
 	</script>
 </body>
